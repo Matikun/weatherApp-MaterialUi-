@@ -1,6 +1,6 @@
 const cities = [
 	{ city: 'Buenos Aires', countryCode: 'AR' },
-	{ city: 'Chivilcoy', countryCode: 'AR' },
+	{ city: 'Washington', countryCode: 'US' },
 	{ city: 'Madrid', countryCode: 'ES' },
 	{ city: 'Bogota', countryCode: 'CO' },
 ];

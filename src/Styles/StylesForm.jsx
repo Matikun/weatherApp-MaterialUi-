@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
 			width: '25ch',
 		},
 	},
+	bluePaper: {
+		backgroundColor: lightBlue[50],
+	},
 	capitalize: {
 		textTransform: 'capitalize',
 	},
@@ -23,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	buttonForm: {
 		position: 'relative',
-		marginLeft: '1em',
+		marginLeft: '0.5em',
+		marginRight: '0.5em',
 		marginBottom: '1.2em',
 		top: '0',
 	},

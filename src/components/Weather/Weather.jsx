@@ -9,7 +9,7 @@ import { Skeleton } from '@material-ui/lab';
 const Weather = ({ temperature, state }) => {
 	return (
 		<Grid container item direction="row" justify="center" alignItems="center">
-			<IconContext.Provider value={{ size: '6em' }}>
+			<IconContext.Provider value={{ size: '5em' }}>
 				{state ? (
 					<IconState state={state} />
 				) : (
@@ -17,8 +17,8 @@ const Weather = ({ temperature, state }) => {
 				)}
 			</IconContext.Provider>
 			{temperature ? (
-				<Typography display="inline" variant="h2">
-					{temperature}
+				<Typography display="inline" variant="h3">
+					{temperature}°
 				</Typography>
 			) : (
 				<Skeleton variant="circle" height={80} width={80} />

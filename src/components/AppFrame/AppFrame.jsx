@@ -19,9 +19,13 @@ import { ThemeProvider } from '@material-ui/styles';
 const AppFrame = ({ children }) => {
 	const { data, actions } = useContext(WeatherContextState);
 	const classes = useStyles();
+	const isDark = data.darkMode;
 	return (
-		<ThemeProvider theme={data.darkMode ? darkTheme : lightTheme}>
-			<Paper style={{ height: 'auto', flexGrow: 1, paddingBottom: '3em' }}>
+		<ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+			<Paper
+				className={isDark ? '' : classes.bluePaper}
+				style={{ minHeight: '100vh', flexGrow: 1, paddingBottom: '3em' }}
+			>
 				<Grid container justify="center">
 					<AppBar position="static" className={classes.appBar}>
 						<Toolbar>
@@ -51,6 +55,9 @@ const AppFrame = ({ children }) => {
 									/>
 								</IconContext.Provider>
 							</IconButton>
+							<Typography variant="h6" color="inherit">
+								{isDark ? 'Go Light' : 'Go Dark'}
+							</Typography>
 						</Toolbar>
 					</AppBar>
 					<Grid item xs={12} sm={11} md={10} lg={8}>
